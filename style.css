@@ -1,8 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
   }
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 :root {
     --dark-cyan: hsl(158, 36%, 37%);
     --cream: hsl(30, 38%, 92%);
@@ -52,10 +57,14 @@ footer{
     overflow: hidden;
   }
   .photo{
-    height: 100%;
     width: 100%;
-    max-width: 750px;
-    margin-bottom: 0;
+    max-width: 500px; 
+    height: 750px; 
+    border-radius: 0px;
+    overflow: hidden;
+    position: relative;
+    padding: 0; 
+    margin: 0;  
   }
   .content{
     display: flex;
@@ -68,12 +77,14 @@ footer{
 
   /* Responsive Design */
   .responsive-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    width: 100%; 
-    height: auto; 
-    max-width: 500px; 
-    border-radius: 0px; 
+    object-position: center;
+    margin: 0; 
+    padding: 0;  
   }
+  
   @media (min-width: 375px) {
     .container {
       padding: 0px;
@@ -81,7 +92,12 @@ footer{
     }
     h1 {
       font-size: 32px;
-    }
+    }  .photo{
+        max-height: 750px;
+        max-width: 750px;
+        margin-bottom: 0;
+      }
+    
   }
 
   @media (min-width: 1440px) {
