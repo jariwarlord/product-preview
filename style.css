@@ -97,6 +97,27 @@ footer{
   .add-button:hover{
     background-color: var(--very-dark-blue);
   }
+  .price-container {
+    font-family: 'Fraunces', serif;
+    padding-top: 15px;
+    display: inline-flex; 
+    align-items: center;
+  }
+  .current-price {
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan); 
+    font-size: 2.5em; 
+    font-weight: bold;
+    margin-right: 10px; 
+  }
+  
+  .original-price {
+    font-family: 'Fraunces', serif;
+    color: var(--dark-grayish-blue); 
+    text-decoration: line-through; 
+    font-size: 1em;
+  }
+  
 
   /* Responsive Design */
   .responsive-image {
@@ -148,6 +169,7 @@ footer{
         .content{
             width: 100%;
         }
+        
     }    
 }
 
