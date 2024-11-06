@@ -30,6 +30,7 @@ body {
   }
 
   h1, h2 {
+    padding-top: 2%;
     font-family: 'Fraunces', serif;
     font-weight: 700;
     color: var(--very-dark-blue);
@@ -44,6 +45,7 @@ body {
     letter-spacing: 1cap;
   }
   .features{
+    padding-top: 20px;
     letter-spacing: 0;
   }
 footer{
@@ -73,19 +75,27 @@ footer{
     margin: 0;  
   }
   .content{
+    padding: 3%;
     display: flex;
     flex-direction: column;
   }
   .add-button{
+    margin-top: 25px;
+    font-weight: 700;
+    border: none;
+    text-align: center;
     align-items: center;
     justify-content: center;
     align-self: center;
-    border-radius: 2%;
+    border-radius: 6%;
     color: var(--cream);
-    width: 5rem;
+    width: 13rem;
     height: 3rem;
     background-color: var(--dark-cyan);
     display: inline-block;
+  }
+  .add-button:hover{
+    background-color: var(--very-dark-blue);
   }
 
   /* Responsive Design */
@@ -93,7 +103,6 @@ footer{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
     margin: 0; 
     padding: 0;  
   }
@@ -110,6 +119,9 @@ footer{
         max-width: 750px;
         margin-bottom: 0;
       }
+    .content{
+        padding: 3%;
+    }
     
   }
 
@@ -118,17 +130,23 @@ footer{
         background-color: white;
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
         padding: 0;
         margin: 0;
-        width: auto;
+        width: 22%;
+        height: 30%;
     h1 {
-      font-size: 50px;
+      font-size: 32px;
     }
     h2 {
       font-size: 36px;
 
+        }
+        .photo{
+            width: 100%;
+            height: 100%;
+        }
+        .content{
+            width: 100%;
         }
     }    
 }
