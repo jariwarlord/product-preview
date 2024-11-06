@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
   }
 :root {
     --dark-cyan: hsl(158, 36%, 37%);
@@ -48,12 +48,14 @@ footer{
     padding: 0;
     margin: 0;
     width: auto;
-    border-radius: 2%;
+    border-radius: 1%;
+    overflow: hidden;
   }
   .photo{
     height: 100%;
     width: 100%;
-    padding-bottom: 0;
+    max-width: 750px;
+    margin-bottom: 0;
   }
   .content{
     display: flex;
@@ -66,6 +68,7 @@ footer{
 
   /* Responsive Design */
   .responsive-image {
+    object-fit: cover;
     width: 100%; 
     height: auto; 
     max-width: 500px; 
