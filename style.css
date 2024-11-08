@@ -1,19 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  *,
+*,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 :root {
+    /* Colors */
     --dark-cyan: hsl(158, 36%, 37%);
     --cream: hsl(30, 38%, 92%);
     --very-dark-blue: hsl(212, 21%, 14%);
     --dark-grayish-blue: hsl(228, 12%, 48%);
     --white: hsl(0, 0%, 100%);
+    /*Typhography*/
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Fraunces', serif;
+    --font-size-base: 14px;
+    --font-size-small: 0.8em;
+    --font-size-large: 2.5em;
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    /*Border-radius*/
+    --border-radius: 8px;
   }
   
 body {
@@ -41,7 +52,7 @@ body {
   p {
     padding-top: 7%;
     padding-left: 1%;
-    font-family: 'Montserrat', sans-serif;
+    font-family:  var(--font-primary);
     font-size: 0.8em;
     color: hsl(228, 12%, 48%);
     text-align: left;
@@ -67,7 +78,7 @@ footer{
     padding: 0;
     margin: 0;
     width: auto;
-    border-radius: 1%;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
   .photo{
@@ -148,7 +159,7 @@ footer{
         flex-direction: column;
         padding: 0;
         margin: 0;
-        height: auto; /* Otomatik yüksekliği ayarla */
+        height: auto; 
         max-height: 900px;
         width: 100%;
     }
@@ -156,7 +167,7 @@ footer{
     .photo {
         width: 100%;
         height: auto;
-        max-height: 400px; /* Yüksekliği sınırlamak için */
+        max-height: 400px; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -166,9 +177,9 @@ footer{
     .responsive-image {
         width: 100%;
         height: auto;
-        max-height: 100%; /* Görüntünün yüksekliğini sınırlamak için */
-        object-fit: contain; /* Görüntünün kırpılmasını önler */
-        object-position: center; /* Görüntünün ortalanmasını sağlar */
+        max-height: 100%; 
+        object-fit: contain; 
+        object-position: center; 
     }
     
     .content {
@@ -186,32 +197,34 @@ footer{
   }
 }
 @media (max-width: 375px) {
+  .content{
+    width: 360px;
+  }
   .desktop-title {
     display: none;
-}
-
+  }
 .mobile-title {
-    display: block;
-    padding-top: 7%;
-    padding-left: 2%;
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    color: var(--very-dark-blue);
-    text-align: left;
-    font-size: 2rem; /* veya istediğiniz boyut */
-    line-height: 1.2;
+  display: block;
+  font-size: 1.4em;
+  line-height: 1.2;
+  padding: var(--spacing-sm) 0;
 }
 
   .container {
-      flex-direction: column;
-      width: 90%;
-      margin: 1rem auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    max-height: 900px;
+    width: 100%;
   }
 
   .photo {
       width: 100%;
-      height: auto;
-      max-height: 300px;
+      height: 190px;
+      max-height: 200px;
   }
 
   .photo picture {
@@ -226,10 +239,17 @@ footer{
       object-fit: cover;
       object-position: center;
   }
+  .price-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .original-price{
+    font-size: x-small;
+  }
+}
  .attribution { 
     font-size: 11px; text-align: center;
  }
   .attribution a {
      color: hsl(228, 45%, 44%); 
   }
-}
